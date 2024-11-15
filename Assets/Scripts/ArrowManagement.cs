@@ -40,9 +40,10 @@ public class ArrowManagement : MonoBehaviour
         timer += Time.deltaTime;
 
         // Check if 1 second has passed
-        if (timer >= 1.0f)
+        if (timer >= 0.05f)
         {
-            logicScript.addScore(1); // Increment the score
+            int randDefault = Random.Range(1, 3);
+            logicScript.addScore(randDefault + 23); // Increment the score
             timer = 0.0f;              // Reset the timer
         }
 
