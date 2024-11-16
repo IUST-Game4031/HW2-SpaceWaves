@@ -11,6 +11,8 @@ public class ObstaclePrefab : MonoBehaviour
     private float heigthOffset = 1f; // Offset to spawn the obstacle at a random height
     private float middleHeightOffset = 0.7f; // Offset to spawn the obstacle at a random height
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject gameOverScreen;
+
     void Start()
     {
 
@@ -19,6 +21,12 @@ public class ObstaclePrefab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // stop making obstacle if game over is active
+        if (gameOverScreen.activeSelf)
+        {
+            return;
+        }
+
         if (nextSpawn < spawnRate)
         {
             nextSpawn += Time.deltaTime; // Increment the time to spawn the next obstacle

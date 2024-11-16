@@ -317,6 +317,7 @@ MonoBehaviour:
   fallSpeedLimit: -10
   minY: -2
   logicScript: {fileID: 0}
+  gameOverScreen: {fileID: 1188933489}
 --- !u!1 &92630721
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 2277580962081479820, guid: edf4af9d88486c446bacb1d5712eb309, type: 3}
   obstaclePrefab2: {fileID: 3197999449212870146, guid: 6dab394374236224eb86f7843b2cd2c4, type: 3}
+  gameOverScreen: {fileID: 1188933487}
 --- !u!4 &92630723
 Transform:
   m_ObjectHideFlags: 0
@@ -1559,6 +1561,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6672683180725040662, guid: cc774dd47f0fd6b4b8d89019cec1a1ee, type: 3}
+      propertyPath: m_text
+      value: 'restart '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672683180725040662, guid: cc774dd47f0fd6b4b8d89019cec1a1ee, type: 3}
+      propertyPath: m_fontSize
+      value: 13.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672683180725040662, guid: cc774dd47f0fd6b4b8d89019cec1a1ee, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 13.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122098938973029438, guid: cc774dd47f0fd6b4b8d89019cec1a1ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122098938973029438, guid: cc774dd47f0fd6b4b8d89019cec1a1ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122098938973029438, guid: cc774dd47f0fd6b4b8d89019cec1a1ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOverScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122098938973029438, guid: cc774dd47f0fd6b4b8d89019cec1a1ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9059655166806431193, guid: cc774dd47f0fd6b4b8d89019cec1a1ee, type: 3}
       propertyPath: m_Name
       value: GameOverScreen
@@ -1744,7 +1774,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1823406229}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1188933489}
+        m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1823406229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2191,7 +2233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: restart (space)
+  m_text: 'restart '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2218,8 +2260,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11.8
-  m_fontSizeBase: 11.8
+  m_fontSize: 13.24
+  m_fontSizeBase: 13.24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
