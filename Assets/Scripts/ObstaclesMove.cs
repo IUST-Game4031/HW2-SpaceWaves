@@ -4,7 +4,6 @@ public class ObstaclesMove : MonoBehaviour
 {
     public float speed = 5f; // Speed of the obstacle
     public float deadZone = -30f; // The position at which the obstacle is destroyed
-    private float timer = 0.0f;
 
     public LogicScript logicScript;
 

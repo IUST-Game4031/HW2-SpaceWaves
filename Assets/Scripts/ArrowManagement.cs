@@ -106,7 +106,7 @@ public class ArrowManagement : MonoBehaviour
     {
         gameFinished = true; // Prevent further movement
         arrowRigidbody.transform.rotation = Quaternion.Euler(0, 0, -30);
-        arrowRigidbody.linearVelocity = new Vector2(0, -1); // Stop arrow movement
+        arrowRigidbody.linearVelocity = Vector2.zero; // Stop arrow movement
         gameOverScreen.Setup(logicScript.playerScore);
         Debug.Log("Game Over!"); // Log message (can be replaced with UI update)
     }
