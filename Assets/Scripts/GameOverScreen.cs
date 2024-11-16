@@ -26,7 +26,7 @@ public class GameOverScreen : MonoBehaviour
     }
 
     public void Restart(){
-        SceneManager.LoadScene("spaceWaves");
+        SceneManager.LoadScene("SampleScene");
     }
 
     void Start()
